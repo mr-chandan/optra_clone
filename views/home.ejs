@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="home.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav box container">
+      <a href="#" class="logo">
+        <img src="./logo.png" class="nav-img" />
+        Student info
+      </a>
+      <div class="nav-items">
+        <ul class="list">
+          <li>Home</li>
+          <li>Contact</li>
+          <li>Info</li>
+          <li>Join</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="profile">
+    <div class="container grid test">
+      <div class="format">
+        <img src="./no-profile-picture.webp" class="profile-img" />
+        <h2 class="std-name"> <%= rows[0].name %></h2>
+        <hr class="line" />
+        <div class="info">
+          <h1>StudentId :  <%= rows[0].studentid %></h1>
+          <h1>Course :  <%= rows[0].course %></h1>
+          <h1>Section :  <%= rows[0].section %></h1>
+          <button class="btn">Get Student Info</button>
+        </div>
+      </div>
+      <div class="home-para">
+        <h1>About Surana</h1>
+        <img src="./logo.png" class="font-img"/>
+        <p class="front-text">
+          Surana College, under GDA Foundation Trust is affiliated to
+          Bangalore University , and is also included under section 2 &
+          12 of the UGC Act 1956. The institution has been catering to all
+          sections of society on need-based quality education. 
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="attandance" class="attandance container">
+    <div class="att-head">
+      <h1>
+        Attendance
+      </h1>
+    </div>
+
+    <div class="att-list">
+      <div class="gap">
+        <h4 class="prog">English</h4>
+        <div class="bar">
+          <div class="skill html " style="width:<%= rows[0].English%>%"><%= rows[0].English%>%</div>
+        </div>
+      </div>
+      <div class="gap">
+        <h4 class="prog">Kannada</h4>
+        <div class="bar">
+          <div class="skill html " style="width:<%= rows[0].Kannada%>%"><%= rows[0].Kannada%>%</div>
+        </div>
+      </div>
+      <div class="gap">
+        <h4 class="prog">Java</h4>
+        <div class="bar">
+          <div class="skill html " style="width: <%= rows[0].java%>%"><%= rows[0].java%>%</div>
+        </div>
+      </div>
+      <div class="gap">
+        <h4 class="prog">Dbms</h4>
+        <div class="bar">
+          <div class="skill html " style="width: <%= rows[0].Dbms%>%"><%= rows[0].Dbms%>%</div>
+        </div>
+      </div>
+      <div class="gap">
+        <h4 class="prog">CA</h4>
+        <div class="bar">
+          <div class="skill html " style="width: <%= rows[0].ca%>%"><%= rows[0].ca%>%</div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </section>
+</body>
+
+</html>
+

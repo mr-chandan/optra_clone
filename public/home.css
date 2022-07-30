@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #edf2f0;
+}
+
+header {
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.nav-img {
+  height: 70px;
+  width: 70px;
+}
+
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  row-gap: 1.5rem;
+  column-gap: 1.5rem;
+}
+
+.nav-items ul li {
+  list-style: none;
+}
+
+.format {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  align-self: center;
+  height: 150px;
+  width: 150px;
+}
+
+.line {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.front-text {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #81cacf;
+  color: #fff;
+  padding: 1.15rem 2.75rem;
+  font-weight: 1rem;
+  border-radius: 3rem;
+  transition: 0.3s;
+  border: none;
+  margin-top: 1.5rem;
+}
+
+.home-para {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attandance {
+  margin-top: 3rem;
+}
+
+.showatt {
+  align-items: center;
+  flex-direction: column;
+}
+
+.prog {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.prog li {
+  list-style: none;
+}
+
+.att-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.att-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.gap {
+  gap: 2.5px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  flex-direction: row;
+  margin-left: 10%;
+  justify-content: space-between;
+}
+
+.prog {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-weight: 100;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.bar {
+  background-color: rgb(192, 192, 192);
+  width: 80%;
+  border-radius: 15px;
+  height: 25px;
+}
+
+.skill {
+  background-color: rgb(116, 194, 92);
+  color: white;
+  text-align: right;
+  font-size: 15px;
+  border-radius: 15px;
+  height: 25px;
+  text-align: center;
+}
+
+/* //425 */
+
+@media screen and (max-width: 405px) {
+  .nav-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  .nav-items ul li {
+    font-size: 15px;
+  }
+
+  .profile-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .std-name {
+    font-size: 1.5rem;
+  }
+
+  .info h1 {
+    font-size: 1.2rem;
+  }
+
+  .font-img {
+    height: 300px;
+    width: 250px;
+  }
+
+  .prog {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 371px) {
+  .logo {
+    font-size: 13px;
+  }
+
+  .font-img {
+    height: 250px;
+    width: 200px;
+  }
+
+  .nav-items ul li {
+    font-size: 13px;
+  }
+
+  p {
+    line-height: 1.5px;
+  }
+
+  .prog {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 0%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .test {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-para {
+    margin-top: 50px;
+  }
+
+  .font-img {
+    height: 220px;
+    width: 200px;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .profile-img {
+    margin-bottom: 1rem;
+  }
+
+  .gap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bar {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 448px) {
+  a {
+    font-size: 14px;
+  }
+
+  .nav-items ul li {
+    font-size: 14px;
+  }
+
+  p {
+    line-height: 1.2px;
+  }
+
+  .prog {
+    font-size: 0.9rem;
+  }
+
+  .profile-img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .std-name {
+    font-size: 1.3rem;
+  }
+
+  .info h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .logo {
+    font-size: 0%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .list {
+    margin-left: 2px;
+    column-gap: 1rem;
+  }
+}
+
+/* ///loginpage-css////// */
+
+.Main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.wrap-login {
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 130px 130px 130px 130px;
+}
+
+.login-pic {
+  width: 316px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-pic img {
+  max-width: 100%;
+}
+
+.login-form {
+  width: 290px;
+}
+
+.login-form-title {
+  font-family: "poppins", sans-serif;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  display: block;
+  padding-bottom: 54px;
+}
+
+.wrap-input {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.input {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #666666;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+.focus-input {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(87, 184, 70, 0.8);
+}
+
+.input:focus + .focus-input {
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+.symbol-input {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #666666;
+  transition: all 0.4s;
+}
+
+.input:focus + .focus-input + .symbol-input {
+  color: #57b846;
+  padding-left: 28px;
+}
+
+.login-form-btn-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.login-form-btn {
+  font-family: "poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  background: #57b846;
+  text-transform: uppercase;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: all 0.4s;
+  border: none;
+}
+
+.login-form-btn:hover {
+  background: #333333;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.txt1 {
+  font-family: "poppins";
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.txt2 {
+  font-family: "poppins";
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.p-t-1 {
+  padding-top: 12px;
+}
+
+.p-t-2 {
+  padding-top: 136px;
+}
+
+a {
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  color: #57b846;
+}
+
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.warn {
+  color: #f94c66;
+  font-size: 0.8rem;
+  align-items: center;
+ justify-content: center;
+ display: flex;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .wrap-login {
+    padding: 90px 90px 90px 90px;
+  }
+
+  .login-pic {
+    width: 35%;
+  }
+
+  .login-form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap-login {
+    padding: 100px 80px 33px 80px;
+  }
+
+  .login-pic {
+    display: none;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap-login {
+    padding: 100px 15px 33px 15px;
+  }
+}
+
+
+
+
+
