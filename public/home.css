@@ -551,8 +551,8 @@ button:hover {
   color: #f94c66;
   font-size: 0.8rem;
   align-items: center;
- justify-content: center;
- display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 /* Responsive */
@@ -590,7 +590,75 @@ button:hover {
   }
 }
 
+.table-wrapper {
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+}
+.pad{
+display: flex;
+flex-direction: column;
+min-height: calc(95vh - 120px);
+align-items: center;
+justify-content: space-around;
+}
+
+/* ////admin// */
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto");
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 2px 15px rgba(64, 64, 64, 0.7);
+
+}
+td,
+th {
+  padding: 15px 20px;
+  text-align: center;
+}
+th {
+  background-color: #ba68c8;
+  color: #fafafa;
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+tr {
+  width: 100%;
+  background-color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
 
 
+.table-wrapper::-webkit-scrollbar {
+  width: 16px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #CFD2CF;
+  border-radius: 100px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+}
+
+.table-name{
+  color: #F806CC;
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 200rem;
+  text-transform: uppercase;
+}
 
 

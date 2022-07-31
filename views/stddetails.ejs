@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="home.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav box container">
+        <a href="#" class="logo">
+          <img src="./logo.png" class="nav-img" />
+          Student info
+        </a>
+        <div class="nav-items">
+          <ul class="list">
+            <li>Home</li>
+            <li>Contact</li>
+            <li>Info</li>
+            <li>Join</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container pad">
+      <h1 class="table-name">Student details</h1>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>SECTION</th>
+              <th>COURSE</th>
+              <th>STUDENT-ID</th>
+            </tr>
+          </thead>
+          <%rows.forEach((row)=>{%>
+          <tr>
+            <td><%=row.id%></td>
+            <td><%=row.name%></td>
+            <td><%=row.section%></td>
+            <td><%=row.course%></td>
+            <td><%=row.studentid%></td>
+          </tr>
+          <%})%>
+
+
+        
+
+          
+        </table>
+      </div>
+    </section>
+  </body>
+</html>

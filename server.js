@@ -52,6 +52,17 @@ app.get('/home', secutity, (req, res) => {
   })
 })
 
+app.get('/stddetails', (req, res) => {
+  mysqlConnection.query("SELECT * FROM users ;",(err, rows) => {
+    if (!err) {
+      console.log(rows)
+      res.render('stddetails', {rows: rows})
+    } else {
+      console.log(err);
+    }
+  })
+})
+
 
 app.listen(3000, () => {
   console.log("connected to port 3000")
