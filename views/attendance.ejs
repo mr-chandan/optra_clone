@@ -26,7 +26,7 @@
         </div>
       </nav>
     </header>
-    <section class="container pad">
+    <section class="tablecon pad">
       <h1 class="table-name">Student details</h1>
       <div class="table-wrapper">
         <table>
@@ -34,9 +34,14 @@
             <tr>
               <th>ID</th>
               <th>NAME</th>
-              <th>SECTION</th>
+              <th>SECTiON</th>
               <th>COURSE</th>
-              <th>STUDENT-ID</th>
+              <th>STUDENTID</th>
+              <th>English</th>
+              <th>Kannada</th>
+              <th>java</th>
+              <th>Dbms</th>
+              <th>ca</th>
             </tr>
           </thead>
           <%rows.forEach((row)=>{%>
@@ -46,6 +51,11 @@
             <td><%=row.section%></td>
             <td><%=row.course%></td>
             <td><%=row.studentid%></td>
+            <td><%=Math.round((row.English/row.t_English)*100)%>%</td>
+            <td><%=Math.round((row.Kannada/row.t_kannada)*100)%>%</td>
+            <td><%=Math.round((row.java/row.t_java)*100)%>%</td>
+            <td><%=Math.round((row.Dbms/row.t_Dbms)*100)%>%</td>
+            <td><%=Math.round((row.ca/row.t_ca)*100)%>%</td>
           </tr>
           <%})%>
         </table>

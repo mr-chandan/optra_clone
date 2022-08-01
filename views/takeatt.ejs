@@ -26,30 +26,57 @@
         </div>
       </nav>
     </header>
-    <section class="container pad">
+    <section class="tablecon pad">
       <h1 class="table-name">Student details</h1>
       <div class="table-wrapper">
+        <form action="/takeatt" method="post">
         <table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>NAME</th>
-              <th>SECTION</th>
-              <th>COURSE</th>
-              <th>STUDENT-ID</th>
+              <th>SECTiON</th>
+              <th>MARK</th>
             </tr>
           </thead>
+     
           <%rows.forEach((row)=>{%>
           <tr>
-            <td><%=row.id%></td>
             <td><%=row.name%></td>
             <td><%=row.section%></td>
-            <td><%=row.course%></td>
-            <td><%=row.studentid%></td>
+            <td><input type="checkbox" name="name"  value="<%=row.name%>"></td>
           </tr>
           <%})%>
+          
         </table>
+        <div class="context">
+        <div class="select">
+          <select>
+            <option value="1">Pure CSS Select</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Sign up</button>
+          </form>
+      </div>
+        
+        
+           
       </div>
     </section>
   </body>
 </html>
+
+
+
+<!-- 
+
+<th>STUDENTID</th>
+<th>English</th>
+<th>Kannada</th>
+<th>java</th>
+<th>Dbms</th>
+<th>ca</th> -->
+
+
+

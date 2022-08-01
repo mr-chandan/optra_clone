@@ -63,31 +63,31 @@
       <div class="gap">
         <h4 class="prog">English</h4>
         <div class="bar">
-          <div class="skill html " style="width:<%= rows[0].English%>%"><%= rows[0].English%>%</div>
+          <div class="skill html " style="width:<%= Math.round((rows[0].English/rows[0].t_English)*100)%>%"><%= Math.round((rows[0].English/rows[0].t_English)*100)%>%</div>
         </div>
       </div>
       <div class="gap">
         <h4 class="prog">Kannada</h4>
         <div class="bar">
-          <div class="skill html " style="width:<%= rows[0].Kannada%>%"><%= rows[0].Kannada%>%</div>
+          <div class="skill html " style="width:<%= Math.round((rows[0].Kannada/rows[0].t_kannada)*100)%>%"><%= Math.round((rows[0].Kannada/rows[0].t_kannada)*100)%>%</div>
         </div>
       </div>
       <div class="gap">
         <h4 class="prog">Java</h4>
         <div class="bar">
-          <div class="skill html " style="width: <%= rows[0].java%>%"><%= rows[0].java%>%</div>
+          <div class="skill html " style="width: <%= Math.round((rows[0].java/rows[0].t_java)*100)%>%"><%= Math.round((rows[0].java/rows[0].t_java)*100)%>%</div>
         </div>
       </div>
       <div class="gap">
         <h4 class="prog">Dbms</h4>
         <div class="bar">
-          <div class="skill html " style="width: <%= rows[0].Dbms%>%"><%= rows[0].Dbms%>%</div>
+          <div class="skill html " style="width: <%=  Math.round((rows[0].Dbms/rows[0].t_Dbms)*100)%>%"><%= Math.round((rows[0].Dbms/rows[0].t_Dbms)*100)%>%</div>
         </div>
       </div>
       <div class="gap">
         <h4 class="prog">CA</h4>
         <div class="bar">
-          <div class="skill html " style="width: <%= rows[0].ca%>%"><%= rows[0].ca%>%</div>
+          <div class="skill html " style="width: <%=  Math.round((rows[0].ca/rows[0].t_ca)*100)%>%"><%= Math.round((rows[0].ca/rows[0].t_ca)*100)%>%</div>
         </div>
       </div>
     </div>

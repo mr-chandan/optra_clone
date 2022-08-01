@@ -13,7 +13,7 @@ const app = express()
 app.use(flash());
 app.use(express.static('public'))  //uses files imgs in public folder
 app.set('view engine', 'ejs') //setting view engine
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: true }))
 app.use(bodyparser.json());  //setting app to use body parser
 
 const mysqlConnection = require("./data/sql-model")
@@ -45,37 +45,46 @@ app.get('/home', secutity, (req, res) => {
   mysqlConnection.query("SELECT * FROM users i INNER JOIN attendance a ON i.id = a.attid where i.id=?;", [req.user], (err, rows) => {  ///we got req.user.optraid from passport
     if (!err) {
       console.log(rows)
-      res.render('home', {rows: rows})
+      res.render('home', { rows: rows })
     } else {
       console.log(err);
     }
   })
 })
 
-app.get('/stddetails', (req, res) => {
-  mysqlConnection.query("SELECT * FROM users ;",(err, rows) => {
+app.get('/takeatt', (req, res) => {
+  mysqlConnection.query("SELECT * FROM users i INNER JOIN attendance a ON i.id = a.attid;", (err, rows) => {
     if (!err) {
-      console.log(rows)
-      res.render('stddetails', {rows: rows})
+      res.render('takeatt', { rows: rows })
     } else {
       console.log(err);
     }
   })
 })
+
+app.post('/takeatt', function (req, res) {
+  console.log(req.body.subject)
+  console.log(req.body.name)
+  res.redirect('/takeatt');
+});
+
+
+
+
+
+app.get('/att', (req, res) => {
+  mysqlConnection.query("SELECT * FROM users i INNER JOIN attendance a ON i.id = a.attid;", (err, rows) => {
+    if (!err) {
+      console.log(rows)
+      res.render('attendance', { rows: rows })
+    } else {
+      console.log(err);
+    }
+  })
+})
+
 
 
 app.listen(3000, () => {
   console.log("connected to port 3000")
 })
-
-
-// mysqlConnection.query("select * from login;", (err, rows, fields) => {
-//     if (!err) {
-//         res.send(rows)
-//     } else {
-//         console.log(err);
-//     }
-// })
-
-
-
