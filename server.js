@@ -34,11 +34,9 @@ app.get('/', (req, res) => {
   res.render('login')
 })
 
-app.post('/', passport.authenticate('local-login', { failureRedirect: '/' }),
-  function (req, res) {
-    res.redirect('/home');
-  });
-
+app.post('/', passport.authenticate('local-login', { failureRedirect: '/' }), function (req, res) {
+  res.redirect('/home');
+});
 
 
 app.get('/home', secutity, (req, res) => {
@@ -63,14 +61,27 @@ app.get('/takeatt', (req, res) => {
 })
 
 app.post('/takeatt', function (req, res) {
-  console.log(req.body.subject)
-  console.log(req.body.name)
-  res.redirect('/takeatt');
+  console.log(req.body)
+  const subject = req.body.subject
+  const names = req.body.name
+  var queries = '';
+  names.forEach(name => {
+    queries += mysqlConnection.format("UPDATE attendance SET " + subject + "=" + subject + "+1 where attid=" + name + ";");
+  });
+  mysqlConnection.query("UPDATE attendance SET t_" + subject + "=t_" + subject + "+1;", (err, rows) => {
+    if (!err) {
+      mysqlConnection.query(queries, (err, rows) => {
+        if (!err) {
+          res.redirect('/takeatt');
+        } else {
+          console.log(err);
+        }
+      })
+    } else {
+      console.log(err);
+    }
+  })
 });
-
-
-
-
 
 app.get('/att', (req, res) => {
   mysqlConnection.query("SELECT * FROM users i INNER JOIN attendance a ON i.id = a.attid;", (err, rows) => {
@@ -82,8 +93,6 @@ app.get('/att', (req, res) => {
     }
   })
 })
-
-
 
 app.listen(3000, () => {
   console.log("connected to port 3000")

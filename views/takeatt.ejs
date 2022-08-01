@@ -43,20 +43,22 @@
           <tr>
             <td><%=row.name%></td>
             <td><%=row.section%></td>
-            <td><input type="checkbox" name="name"  value="<%=row.name%>"></td>
+            <td><input type="checkbox" name="name"  value="<%=row.id%>"  checked  class="check"></td>
           </tr>
           <%})%>
           
         </table>
         <div class="context">
         <div class="select">
-          <select>
-            <option value="1">Pure CSS Select</option>
-            <option value="2">No JS</option>
-            <option value="3">Nice!</option>
+          <select name="subject">
+            <option value="Kannada">KANNADA</option>
+            <option value="English">ENGLISH</option>
+            <option value="java">JAVA</option>
+            <option value="Dbms">DBMS</option>
+            <option value="ca">CA</option>
           </select>
         </div>
-        <button class="btn" type="submit">Sign up</button>
+        <button class="btn" type="submit">Submit</button>
           </form>
       </div>
         
@@ -66,17 +68,3 @@
     </section>
   </body>
 </html>
-
-
-
-<!-- 
-
-<th>STUDENTID</th>
-<th>English</th>
-<th>Kannada</th>
-<th>java</th>
-<th>Dbms</th>
-<th>ca</th> -->
-
-
-
