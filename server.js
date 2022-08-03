@@ -94,6 +94,10 @@ app.get('/att', (req, res) => {
   })
 })
 
+app.get('/admin', (req, res) => {
+  res.render('admin')
+})
+
 app.listen(3000, () => {
   console.log("connected to port 3000")
 })
